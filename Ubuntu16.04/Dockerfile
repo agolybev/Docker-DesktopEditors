@@ -42,7 +42,6 @@ RUN add-apt-repository -y ppa:beineri/opt-qt596-xenial && \
 RUN git clone -b $GIT_BRANCH --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
 RUN cd DesktopEditors && git submodule foreach --recursive git checkout $GIT_BRANCH
 
-
 ENV QT_SELECT=opt-qt59 QT_ICU=/usr/lib/x86_64-linux-gnu QT_PATH=/opt/qt59 QT_PLUGINS=/opt/qt59/plugins
 RUN cd DesktopEditors && make
 RUN cd DesktopEditors && make install
