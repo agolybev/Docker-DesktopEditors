@@ -1,13 +1,16 @@
-##Building ONLYOFFICE DesktopEditors from source code on Centos 7
+## Building ONLYOFFICE DesktopEditors from source code on Centos 7
 
 **Step 1**: Installing dependencies
+
 ***Install EPEL repo***
 ```
 $ sudo yum install epel-release
 $ sudo yum updateinfo
 ```
 ***Install developer tools***
+```
 $ sudo yum groupinstall 'Development Tools'
+```
 ***Install common dependencies***
 ```
 $ sudo yum install \
@@ -46,10 +49,10 @@ $ sudo yum install nodejs
 $ sudo npm install -g grunt-cli
 ```
 
-*Step 2**: Getting source code
-	```
-	$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
-	```
+**Step 2**: Getting source code
+```
+$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
+```
 
 **Step 3**: Compiling and assembling source code
 ```
