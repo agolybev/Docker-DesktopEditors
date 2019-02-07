@@ -1,7 +1,8 @@
-##Building ONLYOFFICE DesktopEditors from source code on Ubuntu 16.04.
+## Building ONLYOFFICE DesktopEditors from source code on Ubuntu 16.04
 
 **Step 1**: Installing dependencies
-	***Install common dependencies***
+
+***Install common dependencies***
 ```
 $ sudo apt-get -yq install \
 	apt-transport-https \
@@ -39,15 +40,15 @@ $ sudo npm install -g grunt-cli
 
 ***Install Qt***
 ```
-$ sudo add-apt-repository ppa:beineri/beineri/opt-qt596-xenial
+$ sudo add-apt-repository ppa:beineri/opt-qt596-xenial
 $ sudo apt-get update
 $ sudo apt-get install qt59-meta-full
 ```
 
 **Step 2**: Getting source code
-	```
-	$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
-	```
+```
+$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
+```
 
 **Step 3**: Compiling and assembling source code
 ```
@@ -59,7 +60,7 @@ $ make
 ```
 $ cd DesktopEditors
 $ sudo QT_ICU=/usr/lib/x86_64-linux-gnu \
-	QT_PATH=/opt/qt59/lib \
+	QT_PATH=/opt/qt59 \
 	QT_PLUGINS=/opt/qt59/plugins \
 	make install
 ```

@@ -1,7 +1,8 @@
-##Building ONLYOFFICE DesktopEditors from source code on Ubuntu 14.04.
+## Building ONLYOFFICE DesktopEditors from source code on Ubuntu 14.04
 
 **Step 1**: Installing dependencies
-	***Install common dependencies***
+
+***Install common dependencies***
 ```
 $ sudo apt-get -yq install \
 	apt-transport-https \
@@ -45,9 +46,9 @@ $ sudo apt-get install qt59-meta-full
 ```
 
 **Step 2**: Getting source code
-	```
-	$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
-	```
+```
+$ git clone --recursive https://github.com/ONLYOFFICE/DesktopEditors.git
+```
 
 **Step 3**: Compiling and assembling source code
 ```
@@ -59,7 +60,7 @@ $ make
 ```
 $ cd DesktopEditors
 $ sudo QT_ICU=/usr/lib/x86_64-linux-gnu \
-	QT_PATH=/opt/qt59/lib \
+	QT_PATH=/opt/qt59 \
 	QT_PLUGINS=/opt/qt59/plugins \
 	make install
 ```
